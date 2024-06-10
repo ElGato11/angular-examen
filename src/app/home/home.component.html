@@ -1,0 +1,11 @@
+<div class="container">
+<table>
+    <tr>
+        <th>Alumnos</th> <th><a routerLink="/crear-alumno">Añadir Alumno</a></th>
+    </tr>
+    <tr *ngFor="let alumno of alumnos">
+      <td>{{alumno.nombre}}</td>
+      <td><a [routerLink]="['/gestionar-alumno/', alumno.id]">Gestionar</a></td>
+    </tr>
+</table>
+</div>

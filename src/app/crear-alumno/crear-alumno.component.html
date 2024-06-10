@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>Crear nuevo comentario</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <form [formGroup]="alumnoForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" class="form-control" formControlName="nombre">
+        </div>
+
+        <div class="form-group">
+          <label for="profesorId">Profesor</label>
+          <select id="profesorId" class="form-control" formControlName="profesorId">
+            <option *ngFor="let profesor of profesores" [value]="profesor.id">
+              {{profesor.nombre}}
+            </option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="alumnoForm.invalid">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+</div>

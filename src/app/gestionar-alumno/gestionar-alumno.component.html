@@ -1,0 +1,19 @@
+<div class="container">
+  <div>
+    <h2>{{alumno.nombre}}</h2>
+    <h3> Tutor : {{profesor}}</h3>
+    <a [routerLink]='["/crear-comentario/",id]'>Crear comentario</a>
+  </div>
+  <br>
+  <hr>
+  <br>
+  <table>
+    <tr>
+      <td>Fecha</td>
+    </tr>
+    <tr *ngFor="let comentario of comentarios">
+      <td class="fecha">{{comentario.fecha}}</td>
+      <td>{{comentario.contenido}}</td>
+    </tr>
+  </table>
+</div>
