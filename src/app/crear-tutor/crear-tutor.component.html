@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>Crear nuevo tutor</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <form [formGroup]="tutorForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" class="form-control" formControlName="nombre">
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="tutorForm.invalid">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+</div>

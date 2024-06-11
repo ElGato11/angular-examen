@@ -6,6 +6,7 @@
     <tr *ngFor="let alumno of alumnos">
       <td>{{alumno.nombre}}</td>
       <td><a [routerLink]="['/gestionar-alumno/', alumno.id]">Gestionar</a></td>
+      <td><button (click)="borrarAlumno(alumno.id)">Borrar</button></td>
     </tr>
 </table>
 </div>

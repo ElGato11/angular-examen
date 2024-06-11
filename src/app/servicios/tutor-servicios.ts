@@ -25,6 +25,13 @@ export class TutorServicios {
     }
     return ret;
   }
+  addTutor(tutor:Tutor){
+    this.tutores.push(tutor);
+}
+
+  deleteTutor(id:number){
+    this.tutores = this.tutores.filter(tutor => tutor.id != id);
+  }
 
   fetchTutores():Observable<Tutor[]>{
     return this.httpClient.get<Tutor[]>(apiURL)

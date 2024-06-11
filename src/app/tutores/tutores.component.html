@@ -1,0 +1,11 @@
+<div class="container">
+  <table>
+    <tr>
+      <th>Alumnos</th> <th><a routerLink="/crear-tutor">Añadir tutor</a></th>
+    </tr>
+    <tr *ngFor="let tutor of tutores">
+      <td>{{tutor.nombre}}</td>
+      <td><button (click)="borrarTutor(tutor.id)">Borrar</button></td>
+    </tr>
+  </table>
+</div>

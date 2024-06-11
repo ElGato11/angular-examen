@@ -32,6 +32,9 @@ export class AlumnosServicios {
     this.alumnos.push(nuevo);
 
 }
+  deleteAlumno(id:number){
+    this.alumnos = this.alumnos.filter(alumno=>alumno.id != id);
+  }
 
    fetchAlumnos():Observable<Alumno[]>{
     return this.httpClient.get<Alumno[]>(apiURL)
