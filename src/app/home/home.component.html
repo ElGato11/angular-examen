@@ -1,12 +1,21 @@
-<div class="container">
-<table>
+<div class="container mt-5">
+  <table class="table table-striped">
+    <thead>
     <tr>
-        <th>Alumnos</th> <th><a routerLink="/crear-alumno">Añadir Alumno</a></th>
+      <th>Alumnos</th>
+      <th class="text-end">
+        <a routerLink="/crear-alumno" class="btn btn-primary">Añadir Alumno</a>
+      </th>
     </tr>
+    </thead>
+    <tbody>
     <tr *ngFor="let alumno of alumnos">
-      <td>{{alumno.nombre}}</td>
-      <td><a [routerLink]="['/gestionar-alumno/', alumno.id]">Gestionar</a></td>
-      <td><button (click)="borrarAlumno(alumno.id)">Borrar</button></td>
+      <td>{{ alumno.nombre }}</td>
+      <td class="text-end">
+        <a [routerLink]="['/gestionar-alumno/', alumno.id]" class="btn btn-secondary me-2">Gestionar</a>
+        <button (click)="borrarAlumno(alumno.id)" class="btn btn-danger">Borrar</button>
+      </td>
     </tr>
-</table>
+    </tbody>
+  </table>
 </div>

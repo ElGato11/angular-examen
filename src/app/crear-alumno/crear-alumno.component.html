@@ -1,31 +1,27 @@
-<div class="container">
+<div class="container mt-5">
   <div class="row">
-    <div class="col-12">
-      <h2>Crear nuevo alumno</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-12">
+    <div class="col-md-8 offset-md-2">
+      <h2 class="text-center mb-4">Crear Nuevo Alumno</h2>
       <form [formGroup]="alumnoForm" (ngSubmit)="onSubmit()">
 
         <div class="form-group">
-          <label for="nombre">Nombre</label>
-          <input id="nombre" class="form-control" formControlName="nombre">
+          <label for="nombre" class="fw-bold">Nombre</label>
+          <input id="nombre" type="text" class="form-control" formControlName="nombre" placeholder="Ingrese el nombre del alumno">
+          <div *ngIf="alumnoForm.get('nombre')?.invalid && alumnoForm.get('nombre')?.touched" class="text-danger mt-2">
+            Nombre es requerido.
+          </div>
         </div>
 
         <div class="form-group">
-          <label for="profesorId">Profesor</label>
+          <label for="profesorId" class="fw-bold">Profesor</label>
           <select id="profesorId" class="form-control" formControlName="profesorId">
-            <option *ngFor="let profesor of profesores" [value]="profesor.id">
-              {{profesor.nombre}}
-            </option>
+            <option *ngFor="let profesor of profesores" [value]="profesor.id">{{ profesor.nombre }}</option>
           </select>
         </div>
 
-        <button type="submit" class="btn btn-primary" [disabled]="alumnoForm.invalid">Enviar</button>
+        <button type="submit" class="btn btn-primary btn-block" [disabled]="alumnoForm.invalid">Enviar</button>
       </form>
     </div>
   </div>
-
 </div>
+

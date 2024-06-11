@@ -1,19 +1,24 @@
 <div class="container">
   <div>
-    <h2>{{alumno.nombre}}</h2>
-    <h3> Tutor : {{profesor}}</h3>
-    <a [routerLink]='["/crear-comentario/",id]'>Crear comentario</a>
+    <h2>{{ alumno.nombre }}</h2>
+    <h3>Tutor: {{ profesor }}</h3>
+    <a [routerLink]="['/crear-comentario/', id]" class="btn-create">Crear comentario</a>
   </div>
   <br>
   <hr>
   <br>
-  <table>
+  <table class="table table-striped">
+    <thead>
     <tr>
-      <td>Fecha</td>
+      <th>Fecha</th>
+      <th>Comentario</th>
     </tr>
+    </thead>
+    <tbody>
     <tr *ngFor="let comentario of comentarios">
-      <td class="fecha">{{comentario.fecha}}</td>
-      <td>{{comentario.contenido}}</td>
+      <td class="fecha">{{ comentario.fecha }}</td>
+      <td>{{ comentario.contenido }}</td>
     </tr>
+    </tbody>
   </table>
 </div>

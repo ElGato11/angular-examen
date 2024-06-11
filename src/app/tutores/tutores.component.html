@@ -1,11 +1,18 @@
-<div class="container">
-  <table>
+<div class="container mt-5">
+  <table class="table table-striped">
+    <thead>
     <tr>
-      <th>Alumnos</th> <th><a routerLink="/crear-tutor">Añadir tutor</a></th>
+      <th>Tutores</th>
+      <th class="text-end"><a routerLink="/crear-tutor" class="btn btn-primary">Añadir Tutor</a></th>
     </tr>
+    </thead>
+    <tbody>
     <tr *ngFor="let tutor of tutores">
-      <td>{{tutor.nombre}}</td>
-      <td><button (click)="borrarTutor(tutor.id)">Borrar</button></td>
+      <td>{{ tutor.nombre }}</td>
+      <td class="text-end">
+        <button (click)="borrarTutor(tutor.id)" class="btn btn-danger">Borrar</button>
+      </td>
     </tr>
+    </tbody>
   </table>
 </div>
