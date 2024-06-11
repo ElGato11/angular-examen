@@ -1,0 +1,16 @@
+{
+  "cursos": [
+    {
+      "id": 1,
+      "name": "Matemáticas",
+      "description": "Curso de matemáticas avanzadas",
+      "students": [1, 2]
+    },
+    {
+      "id": 2,
+      "name": "Historia",
+      "description": "Curso de historia contemporánea",
+      "students": [2, 3]
+    }
+  ]
+}

@@ -5,6 +5,8 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {CommonModule} from "@angular/common";
 import {ComentariosServicios} from "./servicios/comentarios-servicios";
 import {TutorServicios} from "./servicios/tutor-servicios";
+import {Curso} from "./modelos/curso";
+import {CursosSevicios} from "./servicios/cursos-sevicios";
 
 @Component({
   selector: 'app-root',
@@ -17,7 +19,8 @@ export class AppComponent implements OnInit{
 
   constructor(private alumnosServicios:AlumnosServicios,
               private comentariosServicios:ComentariosServicios,
-              private tutorServicios:TutorServicios) {
+              private tutorServicios:TutorServicios,
+              private cursoServicios:CursosSevicios) {
 
   }
 ngOnInit(){

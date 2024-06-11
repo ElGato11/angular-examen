@@ -1,0 +1,16 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Cursos</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let curso of cursos">
+      <td>{{ curso.name }}</td>
+      <td>{{curso.description}}</td>
+      <td><a [href]="['gestionar-curso/',curso.id]">Detalles</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

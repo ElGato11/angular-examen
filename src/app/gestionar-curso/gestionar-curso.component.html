@@ -1,0 +1,25 @@
+<div class="container">
+  <div>
+    <h2>{{ curso.name }}</h2>
+  </div>
+  <br>
+  <hr>
+  <br>
+  <h3>Descripcion</h3>
+  <div>
+   <p>{{curso.description}}</p>
+  </div>
+  <h3>Alumnos</h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Nombre</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let alumno of alumnos">
+      <td class="nombre">{{ alumno.nombre}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

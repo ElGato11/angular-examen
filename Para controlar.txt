@@ -1,1 +1,6 @@
-Npx json-server --port 3000 archivo
+Npx json-server --port 3003 .\db.tutores.json
+Npx json-server --port 3002 .\db.comentario.json
+Npx json-server --port 3001 .\db.alumnos.json
+Npx json-server --port 3004 .\db.cursos.json
+cada uno en una terminal
+
